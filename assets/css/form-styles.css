@@ -1,0 +1,170 @@
+/* تنسيقات عامة للنموذج */
+.registration-section {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-form {
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* تنسيقات العنوان */
+.form-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-title h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.form-title p {
+    color: #666;
+    font-size: 14px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 -10px;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* تنسيقات حقول الإدخال */
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+    
+}
+
+.form-control::placeholder {
+    color: #999;
+}
+
+.file-input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.file-input-group .form-control {
+    border: none;
+    background: transparent;
+    padding-right: 9s0px;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.browse-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+}
+
+.file-status {
+    margin-left: 8px;
+    color: #666;
+    font-size: 13px;
+}
+
+/* تنسيقات زر الإرسال */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* تحسينات التجاوب */
+@media (max-width: 768px) {
+    .registration-form {
+        margin: 15px;
+        padding: 20px;
+    }
+    
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* تحسينات للغة العربية */
+.registration-form * {
+    font-family: 'Cairo', sans-serif;
+}
+.file-input-group input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
