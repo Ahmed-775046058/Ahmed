@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج لوحة التحكم</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- تصميم أعلى الصفحة -->
+    <header class="page-header">
+        <div class="logo">
+            <img src="assets/img/log1.png" alt="شعار الموقع">
+        </div>
+        <h1>مرحبًا بك في لوحة التحكم</h1>
+        <p>قم بإدارة عقاراتك بكل سهولة واحترافية</p>
+    </header>
+
+    <!-- لوحة التحكم -->
+    <div class="admin-panel">
+        <header class="panel-header">
+            <h2>لوحة التحكم - إدارة العقارات</h2>
+            <p>يرجى تعبئة البيانات المطلوبة أدناه</p>
+        </header>
+
+        <form id="adminForm">
+            <div class="form-group">
+                <label for="propertyTitle">اسم العقار</label>
+                <input type="text" id="propertyTitle" name="propertyTitle" placeholder="أدخل اسم العقار">
+            </div>
+
+            <div class="form-group">
+                <label for="propertyImage">صورة العقار</label>
+                <input type="file" id="propertyImage" name="propertyImage">
+            </div>
+
+            <div class="form-group">
+                <label for="propertyLocation">موقع العقار</label>
+                <input type="text" id="propertyLocation" name="propertyLocation" placeholder="أدخل الموقع">
+            </div>
+
+            <div class="form-group">
+                <label for="propertyPrice">سعر العقار</label>
+                <input type="number" id="propertyPrice" name="propertyPrice" placeholder="أدخل السعر">
+            </div>
+
+            <div class="form-group">
+                <label for="propertyDate">تاريخ النشر</label>
+                <input type="date" id="propertyDate" name="propertyDate">
+            </div>
+
+            <div class="form-group">
+                <label for="propertyDetails">تفاصيل إضافية</label>
+                <textarea id="propertyDetails" name="propertyDetails" placeholder="أدخل التفاصيل" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">إرسال البيانات</button>
+        </form>
+    </div>
+
+    <!-- تصميم أسفل الصفحة -->
+    <footer class="page-footer">
+        <p>© 2024 جميع الحقوق محفوظة. تصميم وإدارة <span>موقعك العقاري</span></p>
+        <div class="footer-design"></div>
+    </footer>
+</body>
+</html>
+<style>/* إعدادات عامة */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+    }
+    
+    /* تصميم أعلى الصفحة */
+    .page-header {
+        text-align: center;
+        background: linear-gradient(to right, #333, #97846B);
+        color: white;
+        padding: 20px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        margin-bottom: 20px;
+    }
+    
+    .page-header .logo img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .page-header h1 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    
+    .page-header p {
+        font-size: 16px;
+        margin: 0;
+    }
+    
+    /* الحاوية الرئيسية */
+    .admin-panel {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 600px;
+        padding: 20px;
+        margin: auto;
+        text-align: center;
+    }
+    
+    /* رأس اللوحة */
+    .panel-header {
+        margin-bottom: 20px;
+    }
+    
+    .panel-header h2 {
+        font-size: 20px;
+        color: #333;
+        margin: 0;
+    }
+    
+    .panel-header p {
+        font-size: 14px;
+        color: #666;
+        margin-top: 5px;
+    }
+    
+    /* النموذج */
+    form {
+        text-align: right;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color:  #333, #97846B;
+    }
+    
+    textarea {
+        resize: none;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #252c3163;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .submit-btn:hover {
+        background-color: #616568;
+    }
+    
+    /* تصميم أسفل الصفحة */
+    .page-footer {
+        text-align: center;
+        background: linear-gradient(to right,  #333, #97846B);
+        color: white;
+        padding: 10px;
+        margin-top: 20px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        position: relative;
+    }
+    
+    .page-footer .footer-design {
+        width: 100%;
+        height: 5px;
+        background: white;
+        margin-top: 10px;
+        border-radius: 50px;
+    }
+    
+    .page-footer span {
+        font-weight: bold;
+        color: #f0f0f0;
+    }
+    </style>
